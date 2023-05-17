@@ -1,0 +1,48 @@
+apiVersion: v1
+entries:
+  dask:
+  - apiVersion: v1
+    appVersion: 0.0.1
+    created: "2023-05-17T17:56:09.731788167Z"
+    description: Distributed computation in Python with task scheduling. Modified
+      version to include dask workers as a statefulset.
+    digest: 003d905f8caf9aed2b44e23e6522edd122f015250f80b99ec36f79eeabd68d98
+    home: https://dask.org
+    icon: https://avatars3.githubusercontent.com/u/17131925?v=3&s=200
+    name: dask
+    sources:
+    - https://github.com/carlos-a-enriquez/dask-helm-chart
+    urls:
+    - https://carlos-a-enriquez.github.io/helm_charts/dask/dask-0.0.1-set.by.chartpress.tgz
+    version: 0.0.1-set.by.chartpress
+  daskhub:
+  - apiVersion: v2
+    appVersion: jh2.0.0-dg2023.1.1
+    created: "2023-05-17T17:56:09.739241519Z"
+    dependencies:
+    - import-values:
+      - child: rbac
+        parent: rbac
+      name: jupyterhub
+      repository: https://jupyterhub.github.io/helm-chart/
+      version: 2.0.0
+    - name: dask-gateway
+      repository: https://helm.dask.org/
+      version: 2023.1.1
+    description: Multi-user JupyterHub and Dask deployment.
+    digest: c41609174e95d11c32ccfc89aacc9cdfe30bf4fcc12fe04e2d943f7201e3c120
+    icon: https://avatars3.githubusercontent.com/u/17131925?v=3&s=200
+    maintainers:
+    - email: jtomlinson@nvidia.com
+      name: Jacob Tomlinson (Nvidia)
+    - email: jhamman@ucar.edu
+      name: Joe Hamman (NCAR)
+    - email: erik@sundellopensource.se
+      name: Erik Sundell
+    - email: tom.w.augspurger@gmail.com
+      name: Tom Augspurger
+    name: daskhub
+    urls:
+    - https://carlos-a-enriquez.github.io/helm_charts/dask/daskhub-0.0.1-set.by.chartpress.tgz
+    version: 0.0.1-set.by.chartpress
+generated: "2023-05-17T17:56:09.729789331Z"
